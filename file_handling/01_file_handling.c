@@ -3,7 +3,6 @@
 int main() {
     FILE *fileptr; // File pointer declaration
 
-    // Creating a file named "example.txt" in write mode
     fileptr = fopen("01_test.txt", "w");
 
     if (fileptr == NULL) {
