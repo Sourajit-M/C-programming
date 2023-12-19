@@ -11,7 +11,7 @@ int main() {
     }
 
     // Writing content into the file
-    fprintf(fileptr, "Hello, this is some content written into the file.");
+    fprintf(fileptr, "Hello, this is some content written into the file ---- Sourajit Majumder");
 
     // Closing the file
     fclose(fileptr);
