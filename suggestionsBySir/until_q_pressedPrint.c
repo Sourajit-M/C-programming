@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #define MAX_SIZE 100
-
+//In c programming true cannot be used directly we need to include stdbool.h package
 
 int main() {
     char string[MAX_SIZE];
