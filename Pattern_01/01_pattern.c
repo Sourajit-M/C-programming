@@ -74,7 +74,6 @@ int main(){
         printf("\n");
    }
 
-   */
 
     for(int i=0; i<n; i++){
 
@@ -93,7 +92,59 @@ int main(){
 
         printf("\n");
     }
+
+    */
    
+
+   /*
+
+     * * * * *
+      * * * *
+       * * *
+        * *
+         *
+         *
+        * *
+       * * *
+      * * * *
+     * * * * *
+   
+   */
+
+  for (int i = 0; i < 2*n; i++)
+  {
+    if(i < 5){
+    for (int j = 0; j < i; j++)
+    {
+        printf(" ");
+    }
+
+    for (int k = 0; k < n-i; k++)
+    {
+        printf("* ");
+    }
+    
+    printf("\n");
+
+    }
+
+    else
+    {
+        for(int j=n; j>i-n+1; j--){
+            printf(" ");
+        }
+        
+
+        for(int k=0; k<i-n+1; k++){
+            printf("* ");
+        }
+    
+    printf("\n");
+
+    }
+    
+  }
+  
 
  
 
