@@ -113,7 +113,7 @@ int main(){
 
   for (int i = 0; i < 2*n; i++)
   {
-    if(i < 5){
+    if(i < n){
     for (int j = 0; j < i; j++)
     {
         printf(" ");
@@ -144,6 +144,8 @@ int main(){
     }
     
   }
+
+
   
 
  
