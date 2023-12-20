@@ -3,7 +3,8 @@
 int main() {
     for(int i=0;i<=5;i++){
         for(int j=0;j<=5+i;j++){//for creating blank space
-            printf(" ");
+        // printf("\n");
+            printf("&");
         }
         for(int k=1;k<=5-i;k++){//for creating the pattern on the left side
             printf("*");
@@ -16,4 +17,26 @@ int main() {
         
     }
     return 0;
+
+
+    /*
+    i=0
+
+
+
+
+
+
+
+
+    ***************OUTPUT***************
+    &&&&&&***********
+    &&&&&&&*********
+    &&&&&&&&*******
+    &&&&&&&&&*****
+    &&&&&&&&&&***
+    &&&&&&&&&&&*
+    
+    
+    */
 }
