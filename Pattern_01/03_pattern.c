@@ -91,6 +91,47 @@ int main(){
     }
     printf("\n");
     }
+
+
+    printf("\n");
+
+    /*
+    
+       *   *
+      * * * *
+     *   *   *
+    
+    */
+
+
+    for(int i=0; i<n; i++){
+        int spaces = 1;
+        for(int j=0; j<3*n; j++){
+            if(i == 0){
+                if(j==2 || j==6){
+                    printf("*");
+                }else{
+                    printf(" ");
+                }
+            }else if(i == 1){
+                if(j==1 || j==n || j==5 || j==7){
+                    printf("*");
+                }else{
+                    printf(" ");
+                }
+            }else{
+                if(j==0 || j==4 || j==8){
+                    printf("*");
+                }else{
+                    printf(" ");
+                }
+            }
+            
+        }
+        printf("\n");
+    }
+
+
      
 
 return 0;
