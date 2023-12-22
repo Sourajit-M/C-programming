@@ -13,6 +13,11 @@ int main(){
     printf("Enter a number : ");
     scanf("%d", &n);
 
+    /*
+    think every pattern as matrix to determine its positions
+    and accordingly arrange the conditions
+    */
+
 
     // for(int i=1; i<=n; i++){
     //     for(int j=1; j<=n; j++){
@@ -48,38 +53,38 @@ int main(){
     */
 
    for(int i=0; i<2*n; i++){
-    if(i < n){
-        for(int j=0; j<n-i; j++){
+    if(i < n){//upper part
+        for(int j=0; j<n-i; j++){ //left pattern
             printf("*");
             }
 
-        for(int k=0; k<i; k++){
+        for(int k=0; k<i; k++){ //left spaces
             printf(" ");
         }
 
-        for(int m=0; m<i; m++){
+        for(int m=0; m<i; m++){// right space
             printf(" ");
         }
 
-        for(int p=0; p<n-i; p++){
+        for(int p=0; p<n-i; p++){ // right spaces
             printf("*");
         }
 
         
-    }else{
-        for(int j=0; j<i-n+1; j++){
+    }else{//lower part
+        for(int j=0; j<i-n+1; j++){//left pattern
             printf("*");
             }
 
-        for(int k=n; k>i-n+1; k--){
+        for(int k=n; k>i-n+1; k--){//left spaces
             printf(" ");
         }
 
-        for(int m=n; m>i-n+1; m--){
+        for(int m=n; m>i-n+1; m--){//right spaces
             printf(" ");
         }
 
-        for(int p=0; p<i-n+1; p++){
+        for(int p=0; p<i-n+1; p++){//right pattern
             printf("*");
         }
 
