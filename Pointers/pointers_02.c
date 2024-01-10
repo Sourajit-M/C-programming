@@ -9,7 +9,7 @@ int main(){
     printf("Enter a number:\n");
     scanf("%d", &num);
 
-    int n1= num;
+    int n1 = num;
 
     if(palin(&num)){
         printf("%d is a Palindrome Number", n1);
@@ -21,12 +21,12 @@ int main(){
 bool palin(int *num){
     int n1 =*num;
     int d, rev=0;
-    while(n1!=0){
-        d = n1%10;
+    while(*num!=0){
+        d = *num%10;
         rev = rev*10 + d;
-        n1 /= 10;
+        *num /= 10;
     }
-    if(*num == rev){
+    if(n1 == rev){
         return true;
     }
     return false;
