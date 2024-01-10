@@ -18,9 +18,15 @@ int main(){
     char name[] = "Sourajit";
     char *ptr1 = &name;
     printf("%s\n", name);
+
+
     printf("%p\n", ptr1);
+    printf("%p\n", &name);
 
+    printf("%p\n", &ptr1);
 
+    printf("%s\n", name);
+    printf("%s\n", *(&name));
 
     return 0;
 }
