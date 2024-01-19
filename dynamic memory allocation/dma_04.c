@@ -18,8 +18,11 @@ int main(){
 
     ptr = realloc(ptr, newSize);
 
-    for(int i=newSize-size-1; i< newSize; i++){
-        ptr[i] = 2*(i+1);
+    int a=1;
+
+    for(int i=newSize-size; i< newSize; i++){
+        ptr[i] = 2*a;
+        a++;
     }
 
     for(int i=0; i<newSize; i++){
