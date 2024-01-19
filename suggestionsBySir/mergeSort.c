@@ -46,7 +46,7 @@ int main() {
         }
     }
     
-    printf("Array2 after sorting:\n");
+    printf("\nArray2 after sorting:\n");
     for(int i=0; i<n2; i++){
         printf("%d ", arr2[i]);
     }
@@ -82,7 +82,7 @@ int main() {
         c2++;
     }
     
-    printf("Merged array\n");
+    printf("\nMerged array\n");
     for(int i=0; i<n1+n2; i++){
         printf("%d ", merged[i]);
     }
