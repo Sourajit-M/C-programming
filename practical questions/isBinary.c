@@ -9,7 +9,7 @@ int main(){
     while(num!=0){
         d = num%10;
         if(d==0 || d==1){
-            flag =1;
+            flag = 1;
         }else{
             flag = 0;
             break;
