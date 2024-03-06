@@ -1,41 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 typedef struct Node {
     int data;
     struct Node *next;
 } Node;
 
-
-
-Node *create_node(int data) {
-    Node *new_node = (Node *)malloc(sizeof(Node));
-    if (new_node == NULL) {
-        printf("Memory allocation failed.\n");
-        return 1;
+Node *createNode(int data) {
+    Node *newNode = (Node *)malloc(sizeof(Node));
+    if (newNode == NULL) {
+        printf("Memory Allocation failed! \n");
+        exit(1);
     }
-    new_node->data = data;
-    new_node->next = NULL;
-    return new_node;
+
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
 }
 
-
-void add(Node **head, int data) {
-    Node *new_node = create_node(data);
+void add_element(Node **head, int data) {
+    Node *newNode = createNode(data);
     if (*head == NULL) {
-        *head = new_node;
+        *head = newNode;
     } else {
         Node *temp = *head;
         while (temp->next != NULL) {
             temp = temp->next;
         }
-        temp->next = new_node;
+        temp->next = newNode;
     }
 }
 
-
-void remove(Node **head, int data) {
+void remove_element(Node **head, int data) {
     Node *current = *head;
     Node *prev = NULL;
 
@@ -45,7 +41,7 @@ void remove(Node **head, int data) {
     }
 
     if (current == NULL) {
-        printf("Element not found in the list.\n");
+        printf("Element not found in the list\n");
         return;
     }
 
@@ -58,7 +54,6 @@ void remove(Node **head, int data) {
     free(current);
 }
 
-
 void display(Node *head) {
     while (head != NULL) {
         printf("%d ", head->data);
@@ -70,13 +65,13 @@ void display(Node *head) {
 int main() {
     Node *head = NULL;
 
-    add(&head, 10);
-    add(&head, 20);
-    add(&head, 30);
-    display(head);  
+    add_element(&head, 10);
+    add_element(&head, 20);
+    add_element(&head, 30);
+    display(head);
 
-    remove(&head, 20);
-    display(head);  
+    remove_element(&head, 20);
+    display(head);
 
     return 0;
 }
