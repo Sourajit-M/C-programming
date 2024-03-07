@@ -22,8 +22,14 @@ int main(){
         switch (choice){
             case 1:
             //push function
-
-            if(top < MAX_SIZE-1){
+            if(top == -1){
+                top = 0;
+                int elem;
+                printf("Enter the element to be inserted: ");
+                scanf("%d", &elem);
+                stack[top] = elem;
+            }
+            else if(top <= MAX_SIZE-1){
                 int elem;
                 printf("Enter the element to be inserted: ");
                 scanf("%d", &elem);
